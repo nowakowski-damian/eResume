@@ -1,0 +1,47 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+<!--    TEXT STYLES     -->
+
+    <style name="Header">
+        <item name="android:textSize">@dimen/header_size</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+
+    <style name="Header.Capitalized">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Header.Small">
+        <item name="android:textSize">@dimen/header_size_small</item>
+    </style>
+
+    <style name="Content">
+        <item name="android:textSize">@dimen/content_size</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+
+    <style name="Content.Small">
+        <item name="android:textSize">@dimen/content_size_small</item>
+    </style>
+
+<!--    COMPONENT STYLES   -->
+
+    <style name="CustomCardView" parent="CardView">
+        <item name="android:layout_margin">@dimen/layout_standard_margin</item>
+        <item name="cardElevation">@dimen/card_standard_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_standard_radius</item>
+    </style>
+
+    <style name="Seperator">
+        <item name="android:background">@color/seperatorBackground</item>
+    </style>
+
+</resources>

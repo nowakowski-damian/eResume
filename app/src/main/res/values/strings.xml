@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">eResume</string>
+    <string name="nav_menu_about">About</string>
+    <string name="nav_menu_higlights">Higlights</string>
+    <string name="nav_menu_experience">Experience</string>
+    <string name="nav_menu_education">Education</string>
+    <string name="highlights_header">Highlights</string>
+    <string name="experience_header">Experience</string>
+    <string name="education_header">Education</string>
+    <string name="error_dialog_header">Something went wrong</string>
+    <string name="error_dialog_button_close">Close app</string>
+</resources>

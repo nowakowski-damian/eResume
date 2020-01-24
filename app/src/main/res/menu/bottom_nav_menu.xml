@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_about"
+        android:title="@string/nav_menu_about"
+        android:icon="@drawable/ic_about" />
+
+    <item android:id="@+id/action_highlights"
+        android:title="@string/nav_menu_higlights"
+        android:icon="@drawable/ic_highlights" />
+
+    <item android:id="@+id/action_experience"
+        android:title="@string/nav_menu_experience"
+        android:icon="@drawable/ic_experience" />
+
+    <item android:id="@+id/action_education"
+        android:title="@string/nav_menu_education"
+        android:icon="@drawable/ic_education" />
+
+</menu>

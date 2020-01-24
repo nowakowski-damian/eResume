@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="experience"
+            type="com.dnowakowski.eresume.model.Experience" />
+        <import type="com.dnowakowski.eresume.view.experience.ExperienceAdapterKt"/>
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/CustomCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="@dimen/card_child_standard_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/experience_item_role"
+                style="@style/Header"
+                android:text="@{experience.role}"
+                tools:text="Android Developer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/experience_item_dates"
+                android:text="@{ExperienceAdapterKt.printableDates(experience)}"
+                style="@style/Content"
+                tools:text="August 2018 – December 2019"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/experience_item_role"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/experience_item_company_logo"
+                app:imgUrl="@{experience.company.logo}"
+                tools:src="@drawable/ic_about"
+                android:layout_width="@dimen/logotype_size"
+                android:layout_height="@dimen/logotype_size"
+                app:layout_constraintTop_toBottomOf="@id/experience_item_dates"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/view_standard_margin_small"
+                />
+
+            <LinearLayout
+                android:id="@+id/experience_company_container"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/experience_item_company_logo"
+                app:layout_constraintTop_toTopOf="@id/experience_item_company_logo"
+                app:layout_constraintBottom_toBottomOf="@id/experience_item_company_logo"
+                android:layout_marginStart="@dimen/view_standard_margin_xsmall"
+                >
+
+                <TextView
+                    android:id="@+id/experience_item_company_name"
+                    style="@style/Content.Small"
+                    android:text="@{experience.company.name}"
+                    tools:text="Aequilibrium Software Inc."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/experience_item_company_website"
+                    style="@style/Content.Small"
+                    android:text="@{experience.company.website}"
+                    tools:text="https://aequilibrium.com/"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web" />
+
+                <TextView
+                    android:id="@+id/experience_item_company_address"
+                    style="@style/Content.Small"
+                    android:text="@{experience.company.address}"
+                    tools:text="Vancouver, BC, Canada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="map" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/experience_item_company_responsibilities"
+                style="@style/Content.Small"
+                android:text="@{ExperienceAdapterKt.printableResponsibilities(experience)}"
+                tools:text="- Participate in fast-paced development cycles (SCRUM methodology)\n- Develop digital banking mobile application for modern financial industry\n- Utilize MVVM, RX, LiveData, Data Binding and Kotlin in a project\n- Working with Backbase platform\n- Working on a client side"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/experience_item_company_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/view_standard_margin_small"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

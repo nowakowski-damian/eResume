@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_size">34sp</dimen>
+    <dimen name="header_size_small">24sp</dimen>
+
+    <dimen name="content_size">20sp</dimen>
+    <dimen name="content_size_small">19sp</dimen>
+
+    <dimen name="layout_standard_margin">15dp</dimen>
+
+    <dimen name="card_standard_elevation">10dp</dimen>
+    <dimen name="card_standard_radius">7dp</dimen>
+
+    <dimen name="card_child_standard_padding">10dp</dimen>
+
+    <dimen name="logotype_size">80dp</dimen>
+    <dimen name="profile_pic_size">100dp</dimen>
+
+    <dimen name="view_standard_margin">15dp</dimen>
+    <dimen name="view_standard_margin_small">10dp</dimen>
+    <dimen name="view_standard_margin_xsmall">5dp</dimen>
+
+</resources>

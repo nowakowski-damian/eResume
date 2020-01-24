@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="highlights"
+            type="com.dnowakowski.eresume.util.rx.RxLiveData&lt;java.util.List&lt;String>>" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/colorful_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/highlights_header"
+            style="@style/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/view_standard_margin"
+            android:text="@string/highlights_header"
+            />
+
+        <View
+            android:id="@+id/highlights_seperator"
+            style="@style/Seperator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/highlights_header"
+            android:layout_marginTop="@dimen/view_standard_margin"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/highlights_list"
+            android:background="@color/light_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/highlights_seperator"
+            tools:listitem="@layout/list_item_highlight"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:data="@{highlights}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
